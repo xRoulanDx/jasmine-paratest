@@ -4,7 +4,9 @@
   "description": "Parametrize your `it` assertions.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
-  "files": ["lib/**/*"],
+  "files": [
+    "lib/**/*"
+  ],
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build"
@@ -26,13 +28,13 @@
   },
   "homepage": "https://github.com/xRoulanDx/jasmine-paratest#readme",
   "devDependencies": {
-    "@types/jasmine": "^3.3.0",
+    "@types/jasmine": "^2.0.0",
     "@types/node": "^10.12.11",
-    "jasmine": "^3.3.0",
+    "jasmine": "^2.0.0",
     "prettier": "^1.15.3",
     "typescript": "^3.2.1"
   },
   "peerDependencies": {
-    "jasmine": "^3.3.0"
+    "jasmine": "^2.0.0"
   }
 }

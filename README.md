@@ -22,14 +22,14 @@ describe('Tests for isEven method', () => {
 	.case(2) // same as it
 	.case(64)
 	.it('Method should return true for $1', number => {
-		// arrange
-		// Configure mocks and stubs by case's data
+	    // arrange
+	    // Configure mocks and stubs by case's data
 
-		// act
-		const result = isEven(number);
+	    // act
+	    const result = isEven(number);
 
-		// assert
-		expect(result).toBeTruthy();
+	    // assert
+	    expect(result).toBeTruthy();
 	});
 });
 ```

@@ -1,10 +1,13 @@
 {
   "name": "jasmine-paratest",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Parametrize your `it` assertions.",
-  "main": "dist/index.js",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": ["lib/**/*"],
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",

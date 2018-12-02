@@ -4,13 +4,5 @@
 	"useTabs": true,
 	"tabWidth": 4,
 	"semi": true,
-	"bracketSpacing": false,
-	"overrides": [
-		{
-			"files": "*.scss",
-			"options": {
-				"parser": "scss"
-			}
-		}
-	]
+	"bracketSpacing": false
 }

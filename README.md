@@ -14,7 +14,7 @@ $ npm install -D jasmine-paratest
 
 Configure cases for single `it` assertion.
 
-```ts
+```js
 describe('Tests for isEven method', () => {
     Para.case(32)
 	.fcase(12) // same as fit

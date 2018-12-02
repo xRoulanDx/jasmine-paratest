@@ -1,23 +1,23 @@
-import {CaseType} from './enums/caseType';
-import {Case} from './models/case';
-import {CaseData} from './models/caseData';
-import {CaseRunner} from './caseRunner';
+import {CaseType} from "./enums/caseType";
+import {Case} from "./models/case";
+import {CaseData} from "./models/caseData";
+import {CaseRunner} from "./caseRunner";
 
-export class Fixture {
+export class Paratest {
 	private cases: Case[] = [];
 
 	constructor() {}
 
-	static xcase(...data: CaseData): Fixture {
-		return new Fixture().xcase(...data);
+	static xcase(...data: CaseData): Paratest {
+		return new Paratest().xcase(...data);
 	}
 
-	static fcase(...data: CaseData): Fixture {
-		return new Fixture().fcase(...data);
+	static fcase(...data: CaseData): Paratest {
+		return new Paratest().fcase(...data);
 	}
 
-	static case(...data: CaseData): Fixture {
-		return new Fixture().case(...data);
+	static case(...data: CaseData): Paratest {
+		return new Paratest().case(...data);
 	}
 
 	xcase(...data: CaseData) {

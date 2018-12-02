@@ -1,1 +1,1 @@
-export {Fixture as F} from './fixture';
+export {Paratest as Para} from "./paratest";

@@ -1,0 +1,35 @@
+{
+  "name": "jasmine-paratest",
+  "version": "0.0.0",
+  "description": "Parametrize your `it` assertions.",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xRoulanDx/jasmine-paratest.git"
+  },
+  "keywords": [
+    "jasmine",
+    "test",
+    "parameterized",
+    "unit"
+  ],
+  "author": "xRoulanDx",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xRoulanDx/jasmine-paratest/issues"
+  },
+  "homepage": "https://github.com/xRoulanDx/jasmine-paratest#readme",
+  "devDependencies": {
+    "@types/jasmine": "^3.3.0",
+    "@types/node": "^10.12.11",
+    "jasmine": "^3.3.0",
+    "prettier": "^1.15.3",
+    "typescript": "^3.2.1"
+  },
+  "peerDependencies": {
+    "jasmine": "^3.3.0"
+  }
+}

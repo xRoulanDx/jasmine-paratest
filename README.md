@@ -40,9 +40,9 @@ Test run will looks like
 
 ```
 Tests for isEven method
-    Method should return true for 12
     Method should return true for 32
-    Method should return true for 34
+    Method should return true for 12
+    Method should return true for 33
     Method should return true for 2
     Method should return true for 64
 ```

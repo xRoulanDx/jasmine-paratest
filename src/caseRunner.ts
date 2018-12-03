@@ -13,7 +13,7 @@ export class CaseRunner {
 	private runCase(item: Case) {
 		const expectation = this.prepareNameByArgs(this.name, item.data);
 		const assertion = () => {
-			this.test.call(null, item);
+			this.test.call(null, ...item.data);
 		};
 
 		switch (item.type) {

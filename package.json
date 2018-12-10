@@ -9,6 +9,7 @@
   ],
   "scripts": {
     "build": "tsc",
+    "test": "jasmine **/*.spec.ts",
     "prepare": "npm run build",
     "postversion": "git push && git push --tags"
   },
@@ -36,6 +37,6 @@
     "typescript": "^3.2.1"
   },
   "peerDependencies": {
-    "jasmine": "^2.0.0"
+    "jasmine": ">2.0.0"
   }
 }

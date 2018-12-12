@@ -11,9 +11,11 @@
 		"********** Linters": "",
 		"prettier": "prettier --list-different \"src/**/*.ts\"",
 		"lint": "run-p prettier",
-		"********** Others": "",
+		"********** Test": "",
+		"test": "jasmine src/**/*.spec.ts",
+		"********** Build": "",
 		"build": "tsc",
-		"test": "jasmine **/*.spec.ts",
+		"********** Others": "",
 		"prepare": "npm run build",
 		"postversion": "git push && git push --tags"
 	},

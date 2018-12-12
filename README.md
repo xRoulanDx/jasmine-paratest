@@ -1,6 +1,6 @@
 # Jasmine Paratest
 
-[![Build Status](https://travis-ci.org/xRoulanDx/jasmine-paratest.svg?branch=master)](https://travis-ci.org/xRoulanDx/jasmine-paratest) [![](https://img.shields.io/npm/dt/localeval.svg)](https://www.npmjs.com/package/jasmine-paratest)
+[![Build Status](https://travis-ci.org/xRoulanDx/jasmine-paratest.svg?branch=master)](https://travis-ci.org/xRoulanDx/jasmine-paratest)
 
 
 Parameterize your `it` assertions, reduce lines of code and improve readability of your tests with this library.

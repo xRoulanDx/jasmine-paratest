@@ -35,7 +35,7 @@ export class CaseRunner {
 		return name.replace(/(\$\d+)/g, match => {
 			const index = parseFloat(match.substr(1)) - 1;
 
-			return args[index].toString();
+			return '' + args[index];
 		});
 	}
 }

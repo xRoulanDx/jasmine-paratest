@@ -1,7 +1,7 @@
 import {CaseRunner} from './caseRunner';
 
 export class CaseRunnerFactory {
-	createCaseRunner(name: string, test: Function): CaseRunner {
+	public createCaseRunner(name: string, test: () => void): CaseRunner {
 		return new CaseRunner(name, test);
 	}
 }

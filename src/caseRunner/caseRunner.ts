@@ -1,10 +1,10 @@
-import {Case} from '../models/case';
 import {CaseType} from '../enums/caseType';
+import {Case} from '../models/case';
 
 export class CaseRunner {
-	constructor(private name: string, private test: Function) {}
+	constructor(private name: string, private test: () => void) {}
 
-	runCases(cases: Case[]) {
+	public runCases(cases: Case[]) {
 		cases.forEach(item => {
 			this.runCase(item);
 		});

@@ -1,5 +1,5 @@
 export enum CaseType {
-  Normal,
-  Focused,
-  Excluded
+	Normal,
+	Focused,
+	Excluded
 }

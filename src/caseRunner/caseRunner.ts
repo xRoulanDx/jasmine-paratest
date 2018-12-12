@@ -1,10 +1,11 @@
-import {Case} from './models/case';
-import {CaseType} from './enums/caseType';
+import {CaseType} from '../enums/caseType';
+import {Case} from '../models/case';
 
 export class CaseRunner {
+	// tslint:disable-next-line:ban-types
 	constructor(private name: string, private test: Function) {}
 
-	runCases(cases: Case[]) {
+	public runCases(cases: Case[]) {
 		cases.forEach(item => {
 			this.runCase(item);
 		});
@@ -13,7 +14,7 @@ export class CaseRunner {
 	private runCase(item: Case) {
 		const expectation = this.prepareNameByArgs(this.name, item.data);
 		const assertion = () => {
-			this.test.call(null, ...item.data);
+			this.test.apply(null, item.data);
 		};
 
 		switch (item.type) {

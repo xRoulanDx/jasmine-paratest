@@ -1,5 +1,5 @@
 export enum FixtureType {
-  Focused,
-  Excluded,
-  Normal
+	Focused,
+	Excluded,
+	Normal
 }

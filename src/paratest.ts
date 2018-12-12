@@ -33,7 +33,8 @@ export class Paratest {
 		return this;
 	}
 
-	public it(name: string, test: () => void) {
+	// tslint:disable-next-line:ban-types
+	public it(name: string, test: Function) {
 		this.caseRunnerFactorty.createCaseRunner(name, test).runCases(this.cases);
 	}
 

@@ -1,7 +1,8 @@
 import {CaseRunner} from './caseRunner';
 
 export class CaseRunnerFactory {
-	public createCaseRunner(name: string, test: () => void): CaseRunner {
+	// tslint:disable-next-line:ban-types
+	public createCaseRunner(name: string, test: Function): CaseRunner {
 		return new CaseRunner(name, test);
 	}
 }

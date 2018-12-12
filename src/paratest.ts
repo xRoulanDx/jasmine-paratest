@@ -1,12 +1,11 @@
-import {CaseType} from "./enums/caseType";
-import {Case} from "./models/case";
-import {CaseData} from "./models/caseData";
-import {CaseRunner} from "./caseRunner";
+import {CaseType} from './enums/caseType';
+import {Case} from './models/case';
+import {CaseData} from './models/caseData';
+import {CaseRunnerFactory} from './caseRunner/caseRunnerFactory';
 
 export class Paratest {
 	private cases: Case[] = [];
-
-	constructor() {}
+	private caseRunnerFactorty = new CaseRunnerFactory();
 
 	static xcase(...data: CaseData): Paratest {
 		return new Paratest().xcase(...data);
@@ -36,7 +35,7 @@ export class Paratest {
 	}
 
 	it(name: string, test: Function) {
-		new CaseRunner(name, test).runCases(this.cases);
+		this.caseRunnerFactorty.createCaseRunner(name, test).runCases(this.cases);
 	}
 
 	private addCase(type: CaseType, data: CaseData) {

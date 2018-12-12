@@ -1,5 +1,5 @@
-import {Case} from './models/case';
-import {CaseType} from './enums/caseType';
+import {Case} from '../models/case';
+import {CaseType} from '../enums/caseType';
 
 export class CaseRunner {
 	constructor(private name: string, private test: Function) {}

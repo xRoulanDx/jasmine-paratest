@@ -5,5 +5,13 @@
 	"tabWidth": 4,
 	"semi": true,
 	"bracketSpacing": false,
-	"parser": "typescript"
+	"parser": "typescript",
+	"overrides": [
+		{
+			"files": "*.json",
+			"options": {
+				"parser": "json"
+			}
+		}
+	]
 }

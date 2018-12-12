@@ -1,1 +1,1 @@
-export {Paratest as Para} from "./paratest";
+export {Paratest as Para} from './paratest';

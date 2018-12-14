@@ -1,7 +1,7 @@
-import {CaseRunnerFactory} from './caseRunner/caseRunnerFactory';
 import {CaseType} from './enums/caseType';
 import {Case} from './models/case';
 import {CaseData} from './models/caseData';
+import {CaseRunnerFactory} from './runners/caseRunnerFactory';
 
 export class Paratest {
 	public static xcase(...data: CaseData): Paratest {
@@ -15,8 +15,9 @@ export class Paratest {
 	public static case(...data: CaseData): Paratest {
 		return new Paratest().case(...data);
 	}
+
 	private cases: Case[] = [];
-	private caseRunnerFactorty = new CaseRunnerFactory();
+	private runnerFactory = new CaseRunnerFactory();
 
 	public xcase(...data: CaseData) {
 		this.addCase(CaseType.Excluded, data);
@@ -35,7 +36,7 @@ export class Paratest {
 
 	// tslint:disable-next-line:ban-types
 	public it(name: string, test: Function) {
-		this.caseRunnerFactorty.createCaseRunner(name, test).runCases(this.cases);
+		this.runnerFactory.createRunner(name, test).runCases(this.cases);
 	}
 
 	private addCase(type: CaseType, data: CaseData) {

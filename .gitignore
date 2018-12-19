@@ -1,3 +1,11 @@
+# System Files
+.DS_Store
+
+# Build
+lib
+package
+jasmine-paratest-*
+
+# Others
 node_modules
 package-lock.json
-lib

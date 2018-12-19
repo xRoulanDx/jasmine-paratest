@@ -13,7 +13,7 @@
 		"prettier": "prettier --list-different \"src/**/*.ts\"",
 		"lint:ts": "tslint -p tsconfig.json",
 		"********** Test": "",
-		"test": "mocha -r ts-node/register \"src/**/*.spec.ts\"",
+		"test": "nyc mocha -r ts-node/register \"src/**/*.spec.ts\"",
 		"coveralls": "cat ./coverage/lcov.info | coveralls",
 		"********** Build": "",
 		"build": "tsc",
@@ -65,17 +65,5 @@
 	},
 	"dependencies": {
 		"ts-mockito": "^2.3.1"
-	},
-	"nyc": {
-		"extension": [
-			".ts"
-		],
-		"exclude": [
-			"**/*.d.ts"
-		],
-		"reporter": [
-			"lcov"
-		],
-		"all": true
 	}
 }

@@ -1,3 +1,4 @@
+import {expect} from 'chai';
 import {CaseRunner} from './caseRunner';
 import {CaseRunnerFactory} from './caseRunnerFactory';
 
@@ -12,7 +13,7 @@ describe('CaseRunnerFactory', () => {
 				const result = testedClass.createRunner('', () => null);
 
 				// assert
-				expect(result instanceof CaseRunner).toBeTruthy();
+				expect(result instanceof CaseRunner).to.eq(true);
 			});
 		});
 	});

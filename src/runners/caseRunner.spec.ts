@@ -1,3 +1,4 @@
+import {expect} from 'chai';
 import {anything, capture, deepEqual, instance, mock, verify, when} from 'ts-mockito';
 import {CaseType} from '../enums/caseType';
 import {Case} from '../models/case';
@@ -99,7 +100,7 @@ describe('CaseRunner', () => {
 							jasmineSpecFunction()
 						).last()[1];
 						assertionFunction();
-						expect(testFunctionArgs).toEqual(testCaseData);
+						expect(testFunctionArgs).to.deep.eq(testCaseData);
 					});
 				});
 			}
@@ -124,8 +125,8 @@ describe('CaseRunner', () => {
 				}
 
 				// arrange
-				expect(throwedError).toBeDefined();
-				expect(throwedError.message).toBe('Wrong case type.');
+				expect(throwedError).not.eq(undefined);
+				expect(throwedError.message).to.eq('Wrong case type.');
 			});
 		});
 	});

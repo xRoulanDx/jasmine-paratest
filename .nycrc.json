@@ -1,0 +1,15 @@
+{
+	"extension": [
+		".ts"
+	],
+	"exclude": [
+		"**/*.d.ts"
+	],
+	"include": [
+		"src/**/*.ts"
+	],
+	"reporter": [
+		"lcov"
+	],
+	"all": true
+}

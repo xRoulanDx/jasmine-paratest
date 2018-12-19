@@ -1,6 +1,6 @@
 # Jasmine Paratest
 
-[![Build Status](https://travis-ci.org/xRoulanDx/jasmine-paratest.svg?branch=master)](https://travis-ci.org/xRoulanDx/jasmine-paratest)
+[![Build Status](https://travis-ci.org/xRoulanDx/jasmine-paratest.svg?branch=master)](https://travis-ci.org/xRoulanDx/jasmine-paratest) [![Coverage Status](https://coveralls.io/repos/xRoulanDx/jasmine-paratest/badge.svg?branch=master)](https://coveralls.io/r/xRoulanDx/jasmine-paratest?branch=master)
 
 
 Parameterize your `it` assertions, reduce lines of code and improve readability of your tests with this library.

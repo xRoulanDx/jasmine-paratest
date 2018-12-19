@@ -1,3 +1,4 @@
+import {expect} from 'chai';
 import {anything, deepEqual, instance, mock, verify, when} from 'ts-mockito';
 import {CaseType} from './enums/caseType';
 import {Case} from './models/case';
@@ -65,7 +66,7 @@ describe('Paratest', () => {
 				const result = testedClass.case(123, 456);
 
 				// assert
-				expect(result).toBe(testedClass);
+				expect(result).to.eq(testedClass);
 			});
 		});
 
@@ -174,7 +175,7 @@ describe('Paratest', () => {
 				const result = testedClass.fcase(123, 456);
 
 				// assert
-				expect(result).toBe(testedClass);
+				expect(result).to.eq(testedClass);
 			});
 		});
 
@@ -283,7 +284,7 @@ describe('Paratest', () => {
 				const result = testedClass.xcase(123, 456);
 
 				// assert
-				expect(result).toBe(testedClass);
+				expect(result).to.eq(testedClass);
 			});
 		});
 

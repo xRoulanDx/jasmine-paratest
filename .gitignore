@@ -1,10 +1,16 @@
 # System Files
 .DS_Store
 
-# Build
+# Build artefacts
 lib
+
+# Pack artefacts
 package
 jasmine-paratest-*
+
+# Test artefacts
+/coverage
+/.nyc_output
 
 # Others
 node_modules

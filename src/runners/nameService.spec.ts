@@ -1,3 +1,4 @@
+import {expect} from 'chai';
 import {Para} from '..';
 import {NameService} from './nameService';
 
@@ -35,7 +36,7 @@ describe('NameService', () => {
 				const result = testedClass.prepareNameByArgs(testMessage, testData);
 
 				// assert
-				expect(result).toBe(`test ${expectedResult} test`);
+				expect(result).to.eq(`test ${expectedResult} test`);
 			});
 
 		it('Should correctly paste several arguments', () => {
@@ -47,7 +48,7 @@ describe('NameService', () => {
 			const result = testedClass.prepareNameByArgs(testMessage, testData);
 
 			// assert
-			expect(result).toBe('test 12 test 34 test 56 test');
+			expect(result).to.eq('test 12 test 34 test 56 test');
 		});
 
 		it('Should not paste data if it not exist', () => {
@@ -55,7 +56,7 @@ describe('NameService', () => {
 			const result = testedClass.prepareNameByArgs('test $10 test', [123]);
 
 			// assert
-			expect(result).toBe('test $10 test');
+			expect(result).to.eq('test $10 test');
 		});
 	});
 });

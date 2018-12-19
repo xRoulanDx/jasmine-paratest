@@ -3,6 +3,7 @@
 
 # Build
 lib
+package
 jasmine-paratest-*
 
 # Others

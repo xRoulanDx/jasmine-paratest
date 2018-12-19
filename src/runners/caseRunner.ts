@@ -1,9 +1,16 @@
 import {CaseType} from '../enums/caseType';
 import {Case} from '../models/case';
+import {JasmineSpec} from './jamsineSpec';
+import {NameService} from './nameService';
 
 export class CaseRunner {
-	// tslint:disable-next-line:ban-types
-	constructor(private name: string, private test: Function) {}
+	constructor(
+		private name: string,
+		// tslint:disable-next-line:ban-types
+		private test: Function,
+		private jasmineSpec = new JasmineSpec(),
+		private nameService = new NameService()
+	) {}
 
 	public runCases(cases: Case[]) {
 		cases.forEach(item => {
@@ -12,31 +19,21 @@ export class CaseRunner {
 	}
 
 	private runCase(item: Case) {
-		const expectation = this.prepareNameByArgs(this.name, item.data);
-		const assertion = () => {
-			this.test.apply(null, item.data);
-		};
+		const expectation = this.nameService.prepareNameByArgs(this.name, item.data);
+		const assertion = this.test.bind(null, ...item.data);
 
 		switch (item.type) {
 			case CaseType.Normal:
-				it(expectation, assertion);
+				this.jasmineSpec.it(expectation, assertion);
 				break;
 			case CaseType.Focused:
-				fit(expectation, assertion);
+				this.jasmineSpec.fit(expectation, assertion);
 				break;
 			case CaseType.Excluded:
-				xit(expectation, assertion);
+				this.jasmineSpec.xit(expectation, assertion);
 				break;
 			default:
 				throw new Error('Wrong case type.');
 		}
-	}
-
-	private prepareNameByArgs(name: string, args: any[]): string {
-		return name.replace(/(\$\d+)/g, match => {
-			const index = parseFloat(match.substr(1)) - 1;
-
-			return '' + args[index];
-		});
 	}
 }
